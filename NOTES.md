@@ -14,7 +14,7 @@ To activate the enviorment run
 
 First clone this repository
 
-``` git clone ```
+``` git clone https://github.com/soph-py/object_detection.git ```
 
 Once the conda enviorment is activated, change directories to app/
 
