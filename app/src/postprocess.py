@@ -45,9 +45,9 @@ class Postprocess:
         for key, value in self.updated_detections.items():
             counts1, counts2 = 0, 0
             for prediction in value:
-                if prediction['class'] == 3:
+                if prediction['class'] == 3: # solar panel class id
                     counts1 += 1
-                elif prediction['class'] == 2:
+                elif prediction['class'] == 2: # pool class id
                     counts2 += 1
             object_counts[key].append([counts1, counts2])
         return object_counts
