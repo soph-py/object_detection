@@ -3,3 +3,4 @@
 app/.env_hide
 app/.vscode
 storage_bucket.py
+commit_git_object_detection_app.txt
