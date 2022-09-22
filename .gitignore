@@ -5,3 +5,4 @@ app/.vscode
 **/secret/
 storage_bucket.py
 commit_git_object_detection_app.txt
+app/src/cloud_storage/scratch.py
