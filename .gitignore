@@ -2,5 +2,6 @@
 **/__pycache__
 app/.env_hide
 app/.vscode
+**/secret/
 storage_bucket.py
 commit_git_object_detection_app.txt
