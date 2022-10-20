@@ -4,8 +4,36 @@ from google.cloud import storage
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'app/secret/cloud_storage_key.json'
 storage_client = storage.Client() # create client instance
 
+""" 
+dir(storage_client)
+[
+    'SCOPE', '_SET_PROJECT', '__annotations__', '__class__', 
+    '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', 
+    '__format__', '__ge__', '__getattribute__', '__getstate__', 
+    '__gt__', '__hash__', '__init__', '__init_subclass__', 
+    '__le__', '__lt__', '__module__', '__ne__', '__new__', 
+    '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', 
+    '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 
+    '_base_connection', '_batch_stack', '_bucket_arg_to_bucket', 
+    '_client_cert_source', '_connection', '_credentials', 
+    '_delete_resource', '_determine_default', '_get_resource', 
+    '_http', '_http_internal', '_list_resource', '_patch_resource', 
+    '_pop_batch', '_post_resource', '_push_batch', '_put_resource', 
+    'batch', 'bucket', 'close', 'create_anonymous_client', 
+    'create_bucket', 'create_hmac_key', 'current_batch', 
+    'download_blob_to_file', 'from_service_account_info', 
+    'from_service_account_json', 'generate_signed_post_policy_v4', 
+    'get_bucket', 'get_hmac_key_metadata', 'get_service_account_email', 
+    'list_blobs', 'list_buckets', 'list_hmac_keys', 'lookup_bucket', 
+    'project'
+]
+
+"""
+
+
+
 # create a new bucket
-bucket_name = 'model_results' # bucket name cannot contain spaces
+bucket_name = 'model_results_ss' # bucket name cannot contain spaces
 bucket = storage_client.bucket(bucket_name=bucket_name)
 bucket.location = 'US'
 bucket.storage_class = 'COLDLINE' # Archive | Nearline | Standard
